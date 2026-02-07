@@ -14,173 +14,171 @@ body{
   font-family:'Patrick Hand', cursive;
   background:#ffd6e5;
 }
-.fall-heart{
-  position:fixed;
-  top:-30px;
-  font-size:22px;
-  animation: fallHeart linear infinite;
-  pointer-events:none;
-}
-@keyframes fallHeart{
-  to{transform:translateY(120vh) rotate(360deg);opacity:0;}
-}
+
 .page{
   display:none;
   width:90%;
   max-width:420px;
   margin:auto;
   text-align:center;
-  animation:fade .6s ease;
+  animation:fade .5s ease;
 }
 .page.active{display:block}
+
 @keyframes fade{
   from{opacity:0;transform:translateX(40px)}
   to{opacity:1;transform:translateX(0)}
 }
-h2{font-size:26px;color:#000}
+
 p{font-size:20px;color:#000;line-height:1.7}
-.circle-photo{
-  width:120px;height:120px;border-radius:50%;
-  object-fit:cover;border:3px solid #fff;margin-bottom:15px;
+h2{font-size:26px}
+
+.teddy{
+  width:120px;
+  display:block;
+  margin:20px auto 10px;
 }
+
 button{
-  margin:18px 10px 0;
+  margin:16px 8px 0;
   padding:10px 26px;
   border:none;
   border-radius:30px;
   background:#ff4f8b;
-  color:white;
+  color:#fff;
   font-size:15px;
   cursor:pointer;
 }
-.no-btn{position:absolute}
-#result{margin-top:20px;font-size:22px;color:#000}
 
-/* PHOTO PAGE */
+.no-btn{position:absolute}
+
 .photo-page{
   background:#fff;
   min-height:100vh;
   padding:20px;
 }
+
 .gallery{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:14px;
 }
+
 .frame{
   background:#fff;
-  border-radius:18px;
+  border-radius:16px;
   padding:6px;
-  box-shadow:0 8px 20px rgba(0,0,0,.25);
+  box-shadow:0 6px 18px rgba(0,0,0,.25);
 }
-.frame img{
-  width:100%;
-  border-radius:14px;
-}
-.frame p{
-  margin:6px 0 0;
-  font-size:14px;
-  color:#000;
-}
+.frame img{width:100%;border-radius:12px}
 </style>
 </head>
 
 <body>
 
-<script>
-setInterval(()=>{
-  let h=document.createElement("div");
-  h.className="fall-heart";
-  h.innerText="💗";
-  h.style.left=Math.random()*100+"vw";
-  h.style.animationDuration=12+Math.random()*8+"s";
-  document.body.appendChild(h);
-  setTimeout(()=>h.remove(),20000);
-},900);
-</script>
-
 <!-- PAGE 1 -->
 <div class="page active">
-  <h2>💝 Mở Quà Nào 💝</h2>
-  <p>Một món quà nhỏ dành cho em 🌹</p>
-  <button onclick="next()">Mở 💖</button>
+  <h2>💝 Open Cutie 💝</h2>
+  <button onclick="next()">Open 💖</button>
 </div>
 
-<!-- PAGE 2 (ONLY THIS PAGE HAS PHOTO) -->
+<!-- PAGE 2 -->
 <div class="page">
-  <img class="circle-photo" src="https://i.ibb.co/35MzBGtG/IMG-20251208-115254-857.jpg">
-  <p>CHÚC MỪNG NGÀY LỄ TÌNH NHÂN CỦA ANH, EM YÊU 💝</p>
+  <p>HAPPY VALENTINE'S DAY MY BABY 💝</p>
   <button onclick="back()">Quay lại</button>
   <button onclick="next()">Tiếp</button>
 </div>
 
-<!-- MESSAGE PAGES (NO PHOTO AT ALL) -->
+<!-- PAGE 3 -->
 <div class="page">
+<img class="teddy" src="https://i.ibb.co/TxwPmCct/file-00000000eb2071faaf0cbaccbe3e52fc.png">
 <p>
-Em biết không, khi anh nhìn thấy em lần đầu 🤭, em trông thật xinh đẹp 😍.<br>
+Em biết không, khi anh nhìn thấy em lần đầu 🤭,<br>
+em trông thật xinh đẹp 😍.<br>
 Anh đã yêu em ngay lúc đó 💖.<br><br>
 Anh không biết chuyện gì đã xảy ra với mình,<br>
-anh bắt đầu thích em.....
+anh bắt đầu thích em….. 🤭🙂
 </p>
-<button onclick="back()">Quay lại</button><button onclick="next()">Tiếp</button>
+<button onclick="back()">Quay lại</button>
+<button onclick="next()">Tiếp</button>
 </div>
 
+<!-- PAGE 4 -->
 <div class="page">
+<img class="teddy" src="https://i.ibb.co/TxwPmCct/file-00000000eb2071faaf0cbaccbe3e52fc.png">
 <p>
-Có lẽ anh muốn một người bạn gái xinh đẹp như em 🫠...<br>
-Anh không biết mình có đẹp trai hay không 🤡... Thôi bỏ đi.....
+Có lẽ anh muốn một cô bạn gái xinh đẹp như em 🫠…<br>
+Anh không biết mình có đẹp trai hay không 🤡…<br>
+Thôi quên đi…..
 </p>
-<button onclick="back()">Quay lại</button><button onclick="next()">Tiếp</button>
+<button onclick="back()">Quay lại</button>
+<button onclick="next()">Tiếp</button>
 </div>
 
+<!-- PAGE 5 -->
 <div class="page">
+<img class="teddy" src="https://i.ibb.co/TxwPmCct/file-00000000eb2071faaf0cbaccbe3e52fc.png">
 <p>
-Anh thật sự rất thích em và yêu em rất nhiều 💞<br><br>
-Anh không biết em có yêu anh hay không,<br>
-anh chỉ muốn nói ra cảm xúc của mình.....
+Em biết không, anh đã nói với em về cảm xúc của anh rồi 😉<br><br>
+Anh thật sự thích em và anh yêu em rất nhiều, bé yêu của anh 💞<br><br>
+Anh không biết em có yêu anh hay không,
+anh chỉ muốn nói ra cảm xúc của mình 😿
 </p>
-<button onclick="back()">Quay lại</button><button onclick="next()">Tiếp</button>
+<button onclick="back()">Quay lại</button>
+<button onclick="next()">Tiếp</button>
 </div>
 
+<!-- PAGE 6 -->
 <div class="page">
+<img class="teddy" src="https://i.ibb.co/TxwPmCct/file-00000000eb2071faaf0cbaccbe3e52fc.png">
 <p>
-Anh chỉ muốn hỏi em một điều.... 👉
+Em nhớ không, chúng ta gặp nhau bất ngờ vào ban đêm…<br><br>
+Tim anh đột nhiên thay đổi…<br><br>
+Anh không biết chuyện gì xảy ra,
+nhưng anh cảm thấy an toàn,
+và cuộc sống của anh tốt hơn từ lúc đó…<br><br>
+Anh không nói dối, anh đã cảm nhận điều đó đêm hôm ấy 🫠
 </p>
-<button onclick="back()">Quay lại</button><button onclick="next()">Tiếp</button>
+<button onclick="back()">Quay lại</button>
+<button onclick="next()">Tiếp</button>
 </div>
 
+<!-- PAGE 7 -->
 <div class="page">
-<h2>EM CÓ ĐỒNG Ý LẤY ANH TRONG TƯƠNG LAI KHÔNG, TRANG 💍</h2>
-<button onclick="yes()">CÓ 💖</button>
-<button class="no-btn" onmouseover="runAway(this)">KHÔNG 😆</button>
-<div id="result"></div>
+<h2 style="font-size:30px">I WANT TO ASK YOU SOMETHING 👉</h2>
+<button onclick="back()">Quay lại</button>
+<button onclick="next()">Tiếp</button>
+</div>
+
+<!-- PAGE 8 -->
+<div class="page">
+<h2>WILL YOU MARRY ME IN FUTURE TRANG 💍</h2>
+<button onclick="yes()">YES 💖</button>
+<button class="no-btn" onmouseover="runAway(this)">NO 😆</button>
 <button onclick="back()">Quay lại</button>
 </div>
 
-<!-- LAST PAGE ONLY -->
+<!-- PAGE 9 (ONLY PHOTOS) -->
 <div class="page photo-page">
-  <h2>Our Memories 💕</h2>
-  <div class="gallery">
-    <div class="frame"><img src="https://i.ibb.co/35MzBGtG/IMG-20251208-115254-857.jpg"><p>My Love 💖</p></div>
-    <div class="frame"><img src="https://i.ibb.co/fzyg6CsX/IMG-20260124-033947.png"><p>My Love 💖</p></div>
-    <div class="frame"><img src="https://i.ibb.co/LhsbRzHb/file-0000000018dc72069fb98aef72524203.png"><p>My Love 💖</p></div>
-    <div class="frame"><img src="https://i.ibb.co/s9RdTjH9/file-0000000088f072068a6a2b57b9de9616.png"><p>My Love 💖</p></div>
-    <div class="frame"><img src="https://i.ibb.co/YBHRWLN7/My-Photo-Share1769279156339.jpg"><p>My Love 💖</p></div>
-  </div>
+<h2>Our Memories 💕</h2>
+<div class="gallery">
+<div class="frame"><img src="https://i.ibb.co/35MzBGtG/IMG-20251208-115254-857.jpg"></div>
+<div class="frame"><img src="https://i.ibb.co/fzyg6CsX/IMG-20260124-033947.png"></div>
+<div class="frame"><img src="https://i.ibb.co/LhsbRzHb/file-0000000018dc72069fb98aef72524203.png"></div>
+<div class="frame"><img src="https://i.ibb.co/s9RdTjH9/file-0000000088f072068a6a2b57b9de9616.png"></div>
+<div class="frame"><img src="https://i.ibb.co/YBHRWLN7/My-Photo-Share1769279156339.jpg"></div>
+</div>
 </div>
 
 <script>
 let pages=document.querySelectorAll(".page");
 let i=0;
-function next(){if(i<pages.length-1){pages[i++].classList.remove("active");pages[i].classList.add("active");}}
-function back(){if(i>0){pages[i--].classList.remove("active");pages[i].classList.add("active");}}
-function yes(){
-  document.getElementById("result").innerText="Chúc mừng 🤭🌹";
-  setTimeout(()=>{pages[i].classList.remove("active");i++;pages[i].classList.add("active");},1200);
-}
+function next(){pages[i].classList.remove("active");i++;pages[i].classList.add("active");}
+function back(){pages[i].classList.remove("active");i--;pages[i].classList.add("active");}
+function yes(){next();}
 function runAway(btn){
-  btn.style.top=Math.random()*200+"px";
-  btn.style.left=Math.random()*200+"px";
+  btn.style.top=Math.random()*300+"px";
+  btn.style.left=Math.random()*300+"px";
 }
 </script>
 
